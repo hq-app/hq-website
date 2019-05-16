@@ -1,0 +1,269 @@
+.animation-container {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  contain: content;
+}
+
+@media (max-width: 1500px) {
+    .animation-container {
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .animation-container {
+        position: absolute;
+        top: calc(50% - 420px);
+        left: 40%;
+        opacity: 0.3;
+        height: 900px;
+        width: 900px;
+    }
+}
+@media (max-width: 1024px) {
+    .animation-container {
+        left: calc(50% - 350px);
+        top: auto;
+        bottom: -300px;
+        opacity: 0.3;
+        width: 700px !important;
+        height: 700px !important;
+    }
+}
+@media (max-width: 767px) {
+    .animation-container {
+        margin: auto;
+        position: absolute;
+
+        bottom: calc(50% - 300px);
+        right: calc(-150% + 300px);
+        opacity: 0.1;
+        width: 600px !important;
+        height: 600px !important;
+    }
+}
+@media (max-width: 500px) {
+    .animation-container {
+        margin: auto;
+        position: absolute;
+
+        bottom: calc(50% - 300px);
+        right: calc(-200% + 400px);
+        opacity: 0.1;
+        width: 700px !important;
+        height: 700px !important;
+    }
+}
+
+.animation-container > * {
+  position: absolute;
+}
+
+.animation-container .center-wrapper {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 33.3%;
+  height: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-container .center-wrapper > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.16), 0 0 40px rgba(0, 0, 0, 0.23);
+  -webkit-animation: pulse 1s ease-in 0s infinite alternate;
+          animation: pulse 1s ease-in 0s infinite alternate;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.animation-container .orbit-circle {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.animation-container .orbit-circle.circle-1 {
+  height: 51.3%;
+  width: 51.3%;
+}
+
+.animation-container .orbit-circle.circle-2 {
+  height: 69.3%;
+  width: 69.3%;
+}
+
+.animation-container .orbit-circle.circle-3 {
+  height: 87.3%;
+  width: 87.3%;
+}
+
+.animation-container .orbit {
+  -webkit-animation-duration: var(--duration, 4s);
+          animation-duration: var(--duration, 4s);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: var(--offset, 0s);
+          animation-delay: var(--offset, 0s);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  will-change: transform;
+}
+
+.animation-container .orbit.reverse {
+  animation-direction: reverse;
+}
+
+.animation-container .orbit-1 {
+  -webkit-animation-name: orbit-1;
+          animation-name: orbit-1;
+}
+
+.animation-container .orbit-2 {
+  -webkit-animation-name: orbit-2;
+          animation-name: orbit-2;
+}
+
+.animation-container .orbit-3 {
+  -webkit-animation-name: orbit-3;
+          animation-name: orbit-3;
+}
+
+.animation-container .icon-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.animation-container .app-icon {
+  position: absolute;
+  top: calc(50% - 4.25%);
+  left: calc(50% - 4.25%);
+  background: #fff;
+  border-radius: 50%;
+  width: 8.5%;
+  height: 8.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-container .app-icon > img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+}
+
+@-webkit-keyframes orbit-1 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-25.65%) rotate(0deg);
+            transform: rotate(0deg) translateY(-25.65%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-25.65%) rotate(-360deg);
+            transform: rotate(360deg) translateY(-25.65%) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-1 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-25.65%) rotate(0deg);
+            transform: rotate(0deg) translateY(-25.65%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-25.65%) rotate(-360deg);
+            transform: rotate(360deg) translateY(-25.65%) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes orbit-2 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-34.65%) rotate(0deg);
+            transform: rotate(0deg) translateY(-34.65%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-34.65%) rotate(-360deg);
+            transform: rotate(360deg) translateY(-34.65%) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-2 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-34.65%) rotate(0deg);
+            transform: rotate(0deg) translateY(-34.65%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-34.65%) rotate(-360deg);
+            transform: rotate(360deg) translateY(-34.65%) rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes orbit-3 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-43.65%) rotate(0deg);
+            transform: rotate(0deg) translateY(-43.65%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-43.65%) rotate(-360deg);
+            transform: rotate(360deg) translateY(-43.65%) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-3 {
+  from {
+    -webkit-transform: rotate(0deg) translateY(-43.65%) rotate(0deg);
+            transform: rotate(0deg) translateY(-43.65%) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateY(-43.65%) rotate(-360deg);
+            transform: rotate(360deg) translateY(-43.65%) rotate(-360deg);
+  }
+}
+
